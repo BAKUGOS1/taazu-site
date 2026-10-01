@@ -45,6 +45,7 @@ export function Hero() {
             </a>
           ) : null}
           <h1 id="hero-title">{TEXT.hero.title}</h1>
+          <p className="hero-tagline">{SITE.tagline}</p>
           <p className="hero-sub">{TEXT.hero.sub}</p>
           <div className="cta-row">
             <WaButton message={MESSAGES.order} trackAs="order_hero" className="btn btn-primary">{COPY.orderLabel}</WaButton>
@@ -150,7 +151,13 @@ export function Inside() {
         <div className="ingr stagger">
           {SITE.ingredientCards.map((c) => (
             <div className="card" key={c.name}>
-              <IngrIcon kind={c.icon} />
+              {hasPublic(c.photo) ? (
+                <div className="ingr-photo">
+                  <Image src={c.photo} alt={c.name} fill sizes="(min-width: 900px) 22vw, 45vw" style={{ objectFit: "cover" }} />
+                </div>
+              ) : (
+                <div className={"ingr-photo ingr-tile ingr-tile-" + c.icon}><IngrIcon kind={c.icon} /></div>
+              )}
               <h3>{c.name}</h3>
               <p>{c.line}</p>
             </div>
@@ -235,6 +242,30 @@ export function Flavours() {
             <LeadForm kind="waitlist" />
           </div>
         ) : null}
+      </div>
+    </section>
+  );
+}
+
+/* ---------- 6b. REELS ---------- */
+export function Reels() {
+  const t = TEXT.reels;
+  const reels = SITE.reels.filter((r) => hasPublic(r.src));
+  if (reels.length === 0) return null;
+  return (
+    <section className="reels" id="reels" aria-labelledby="reels-title">
+      <div className="wrap">
+        <span className="eyebrow rv">{t.eyebrow}</span>
+        <h2 id="reels-title" className="rv">{t.title}</h2>
+        <p className="lead rv">{t.lead}</p>
+        <div className="reel-grid stagger">
+          {reels.map((r) => (
+            <figure className="reel" key={r.src}>
+              <video src={r.src} poster={hasPublic(r.poster) ? r.poster : undefined} controls playsInline preload="none" aria-label={"Taazu reel: " + r.title} />
+              <figcaption>{r.title}</figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -433,6 +464,7 @@ export function Footer() {
           <div>
             <a href="#top" className="logo" aria-label="Taazu, back to top"><Logo variant="footer" /></a>
             <p className="foot-tag">{t.tagline}</p>
+            <p className="foot-line">{SITE.tagline}</p>
             <p className="gu foot-gu" lang="gu">{t.gu}</p>
             <Ph tag="p" name="FSSAI number" show={F.fssai} className="foot-fssai">{"FSSAI Reg. No. " + SITE.fssai}</Ph>
           </div>

@@ -18,7 +18,7 @@ function icons(): Metadata["icons"] {
   const b = SITE.brand;
   const icon: { url: string; type?: string; sizes?: string }[] = [];
   if (hasPublic(b.favicon)) icon.push({ url: b.favicon, sizes: "any" });
-  if (hasPublic(b.icon)) icon.push({ url: b.icon, type: "image/svg+xml" });
+  if (hasPublic(b.icon)) icon.push({ url: b.icon, type: b.icon.endsWith(".svg") ? "image/svg+xml" : "image/png" });
   const apple = hasPublic(b.appleIcon) ? [{ url: b.appleIcon, sizes: "180x180" }] : [];
   return { icon: icon, apple: apple };
 }

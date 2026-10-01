@@ -53,6 +53,8 @@ export const SITE = {
   },
   ga4Id: "", // [[PLACEHOLDER: analytics ID]] jaise G-ABC123. Khaali = analytics band
 
+  tagline: "Rehydrate | Refresh | Recover",
+
   metaDescription:
     "Taazu is Amdavad's own still nimbu-namak electrolyte drink, for garba nights, turfs, gyms and hot Ahmedabad days. Book a Taazu station on WhatsApp.",
 
@@ -97,18 +99,20 @@ export const SITE = {
 
   // ---------- PHOTOS (public/images mein rakho) ----------
   hero: {
-    image: "", // [[PLACEHOLDER: hero image]] jaise "/images/hero-cup.webp"
+    image: "/images/hero-duo.jpg", // Gemini bottle render (Classic + Jeera)
     video: "", // [[PLACEHOLDER: hero video]] jaise "/images/hero-loop.mp4" (poster bhi do)
     poster: "",
-    imageAlt: "A cup of Taazu nimbu-namak drink on crushed ice with lemon halves",
+    imageAlt: "Taazu Classic Nimbu Namak and Jeera Masala 250 ml bottles on crushed ice with lemon halves",
   },
 
   // ---------- BRAND FILES (public/brand mein) ----------
   brand: {
-    headerLogo: "/brand/logos/concept-A-horizontal-color.svg",
-    footerLogo: "/brand/logos/concept-A-horizontal-reverse.svg",
-    seal: "/brand/logos/seal-color.svg",
-    icon: "/brand/logos/concept-A-icon-color.svg",
+    // Naya official logo (glossy drop + orange TAAZU). Purane concept-A/B logos ab use nahi hote.
+    headerLogo: "/brand/logo-v2/taazu-logo-horizontal.png",
+    footerLogo: "/brand/logo-v2/taazu-logo-horizontal.png", // footer mein cream badge ke andar dikhta hai
+    seal: "", // khaali = drop wala round seal (neeche dropIcon se)
+    dropIcon: "/brand/logo-v2/taazu-drop.png",
+    icon: "/brand/logo-v2/taazu-icon-512.png",
     favicon: "/brand/icons/favicon.ico",
     appleIcon: "/brand/icons/apple-touch-icon-180x180.png",
     pwa192: "/brand/icons/pwa-192x192.png",
@@ -132,6 +136,7 @@ export const SITE = {
     "Nimbu + Namak + Potassium",
     "#TaazuRaho",
     "Made in Amdavad",
+    "Rehydrate · Refresh · Recover",
   ] as TickerItem[],
 
   // ---------- FLAVOURS (naya flavour = ek block copy karo; chhupana = show: false) ----------
@@ -146,8 +151,8 @@ export const SITE = {
       tagFg: "#1C1917",
       topBg: "#FFF3B0",
       drink: ["#FDF6C3", "#F3DC5A"],
-      image: "", // [[PLACEHOLDER: product photo]] jaise "/images/flavour-classic.webp"
-      imageAlt: "A cup of Taazu Classic Nimbu Namak",
+      image: "/images/flavour-classic.jpg",
+      imageAlt: "Taazu Classic Nimbu Namak 250 ml bottle with an orange cap",
     },
     {
       id: "jeera",
@@ -159,16 +164,16 @@ export const SITE = {
       tagFg: "#FFF8E7",
       topBg: "#F3E1CC",
       drink: ["#EDCB8C", "#B8793B"],
-      image: "", // [[PLACEHOLDER: product photo]]
-      imageAlt: "A cup of Taazu Jeera Masala",
+      image: "/images/flavour-jeera.jpg",
+      imageAlt: "Taazu Jeera Masala 250 ml bottle with a brown cap",
     },
   ] as Flavour[],
 
   ingredientCards: [
-    { name: "Nimbu", icon: "lemon", line: "The tang you grew up with." },
-    { name: "Namak", icon: "salt", line: "Sodium, the main salt you lose in sweat." },
-    { name: "Potassium", icon: "k", line: "The other electrolyte in sweat, in a smaller amount." },
-    { name: "Thanda paani", icon: "drop", line: "Still, not fizzy. Best served chilled." },
+    { name: "Nimbu", icon: "lemon", photo: "/images/ingr-nimbu.jpg", line: "The tang you grew up with." },
+    { name: "Namak", icon: "salt", photo: "/images/ingr-namak.jpg", line: "Sodium, the main salt you lose in sweat." },
+    { name: "Potassium", icon: "k", photo: "", line: "The other electrolyte in sweat, in a smaller amount." },
+    { name: "Thanda paani", icon: "drop", photo: "/images/ingr-paani.jpg", line: "Still, not fizzy. Best served chilled." },
   ],
 
   businesses: [
@@ -176,6 +181,12 @@ export const SITE = {
     { title: "Box-cricket turfs", type: "box-cricket turf", icon: "turf", line: "Floodlight matches run hot. Keep Taazu ready for every team that walks in. Last over tak taazu." },
     { title: "Running clubs", type: "running club", icon: "run", line: "Cups at the finish line for the whole group, from the Sabarmati Riverfront to your Sunday long run." },
     { title: "Canteens & factories", type: "canteen", icon: "canteen", line: "A desi drink your team already likes, for long shifts through Amdavad summers. Bulk orders on WhatsApp." },
+  ],
+
+  // ---------- REELS (public/video mein). Hatana ho to list khaali [] kar do ----------
+  reels: [
+    { title: "Garmi ka Reset", src: "/video/taazu-reel-30s.mp4", poster: "/video/taazu-reel-30s_poster.jpg" },
+    { title: "Andar kya hai?", src: "/video/taazu-reel2-30s.mp4", poster: "/video/taazu-reel2-30s_poster.jpg" },
   ],
 
   partners: [] as Partner[], // [[PLACEHOLDER: partner list]] jaise { name: "XYZ Turf", area: "Bopal" }
@@ -308,6 +319,7 @@ export const TEXT = {
     title: "Chalo, baat karte hain.",
     lead: "Planning an event, running a gym or turf, or feeding a canteen? Tell us a little and we'll plan it with you.",
   },
+  reels: { eyebrow: "Reels", title: "Dekho, phir piyo.", lead: "Two 30-second reels from Taazu. Sound on." },
   final: { line1: "Garmi tez hai.", stationBtn: "Book a Station", tag: "#TaazuRaho" },
   footer: {
     tagline: "Paani se aage.",
