@@ -1,6 +1,6 @@
 import { Header, FloatingWhatsApp, ClientEffects } from "@/components/client";
 import { Logo } from "@/components/brand";
-import { Hero, Ticker, Why, Inside, Flavours, Reels, Station, Business, Trust, SocialProof, Faq, Contact, FinalCta, Footer } from "@/components/sections";
+import { Hero, Ticker, Why, Inside, Flavours, Bottle3d, Reels, Station, Business, Trust, SocialProof, Faq, Contact, FinalCta, Footer } from "@/components/sections";
 
 export const dynamic = "force-static";
 
@@ -15,6 +15,7 @@ export default function Home() {
         <Why />
         <Inside />
         <Flavours />
+        <Bottle3d />
         <Reels />
         <Station />
         <Business />

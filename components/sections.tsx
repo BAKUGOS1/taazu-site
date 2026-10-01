@@ -247,6 +247,25 @@ export function Flavours() {
   );
 }
 
+/* ---------- 6a. 3D BOTTLE ---------- */
+export function Bottle3d() {
+  const t = TEXT.bottle3d;
+  if (!hasPublic(SITE.bottle3d)) return null;
+  return (
+    <section className="b3d" id="bottle-3d" aria-labelledby="b3d-title">
+      <div className="wrap">
+        <span className="eyebrow rv">{t.eyebrow}</span>
+        <h2 id="b3d-title" className="rv">{t.title}</h2>
+        <p className="lead rv">{t.lead}</p>
+        <div className="b3d-frame rv">
+          <iframe src={SITE.bottle3d} title="Interactive 3D Taazu bottle" loading="lazy" />
+        </div>
+        <a className="btn btn-outline mt-6" href={SITE.bottle3d} target="_blank" rel="noopener">{t.open}</a>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- 6b. REELS ---------- */
 export function Reels() {
   const t = TEXT.reels;

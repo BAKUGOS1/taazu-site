@@ -76,6 +76,9 @@
   .reel video { width: 100%; aspect-ratio: 9 / 16; border-radius: 22px; background: var(--ink); border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); display: block; object-fit: cover; }
   .reel figcaption { margin-top: 12px; font-family: var(--display); font-weight: 800; font-size: 1.25rem; }
   .reels { background: var(--cream2); }
+  .b3d-frame { margin-top: 28px; border-radius: 28px; overflow: hidden; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); background: var(--cream); height: min(72vh, 640px); }
+  @media (max-width: 600px) { .b3d-frame { height: 66vh; } }
+  .b3d-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
   .logo-ph { display: flex; align-items: center; gap: 8px; }
   .logo-ph svg { width: 28px; height: 34px; }
   .logo-word { font-family: var(--display); font-weight: 800; font-size: 1.7rem; color: var(--orange); line-height: 1; padding-top: 4px; }

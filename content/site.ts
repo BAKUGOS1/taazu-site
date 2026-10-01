@@ -183,6 +183,9 @@ export const SITE = {
     { title: "Canteens & factories", type: "canteen", icon: "canteen", line: "A desi drink your team already likes, for long shifts through Amdavad summers. Bulk orders on WhatsApp." },
   ],
 
+  // ---------- 3D BOTTLE (public/bottle-3d.html, Taazu app repo ke brand-kit se). Khaali "" = section chhup jaayega ----------
+  bottle3d: "/bottle-3d.html",
+
   // ---------- REELS (public/video mein). Hatana ho to list khaali [] kar do ----------
   reels: [
     { title: "Garmi ka Reset", src: "/video/taazu-reel-30s.mp4", poster: "/video/taazu-reel-30s_poster.jpg" },
@@ -319,6 +322,7 @@ export const TEXT = {
     title: "Chalo, baat karte hain.",
     lead: "Planning an event, running a gym or turf, or feeding a canteen? Tell us a little and we'll plan it with you.",
   },
+  bottle3d: { eyebrow: "3D bottle", title: "Ghuma ke dekho.", lead: "Drag to turn the 250 ml bottle. Switch between Classic and Jeera, or see both together.", open: "Open full screen" },
   reels: { eyebrow: "Reels", title: "Dekho, phir piyo.", lead: "Two 30-second reels from Taazu. Sound on." },
   final: { line1: "Garmi tez hai.", stationBtn: "Book a Station", tag: "#TaazuRaho" },
   footer: {
