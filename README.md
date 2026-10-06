@@ -38,12 +38,15 @@ Dhyan rakho: text double quotes " " ke andar hi likho, aur line ke end ka comma 
 ## 3. Logo aur brand files
 
 Brand kit ki files yahan rehti hain: public/brand/
-- logos/concept-A-horizontal-color.svg (header)
-- logos/concept-A-horizontal-reverse.svg (footer)
-- logos/seal-color.svg (hero ka round seal)
-- logos/concept-A-icon-color.svg (favicon aur Google ke liye)
-- icons/ (favicon.ico, apple-touch-icon-180x180.png, pwa-192x192.png, pwa-512x512.png)
+- logo-v2/taazu-logo-horizontal.png (header aur footer: naya glossy drop + orange TAAZU logo)
+- logo-v2/taazu-drop.png (hero ke round seal ke beech mein)
+- logo-v2/taazu-icon-512.png (Google ke liye logo)
+- icons/ (favicon.ico, apple-touch-icon-180x180.png, pwa-192x192.png, pwa-512x512.png), sab naye drop se bane
 - creatives/ (Instagram strip: jo files 01, 02, 07 se shuru hoti hain)
+- logos/ purane Concept A/B logos hain, ab use nahi hote
+
+Photos (Gemini renders, Taazu app repo ke brand-kit se): public/images/ (hero-duo, flavour-classic, flavour-jeera, ingr-*).
+Reels: public/video/ (content/site.ts mein reels list). Share image: app/opengraph-image.jpg.
 
 Koi file missing ho to website placeholder dikhati hai, tootti nahi. File daalne ke baad dev server restart karo (Ctrl + C, phir npm run dev).
 

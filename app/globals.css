@@ -63,6 +63,22 @@
   .logo-img { height: 34px; width: auto; max-width: 42vw; }
   @media (min-width: 900px) { .logo-img { height: 40px; } }
   .logo-img-footer { height: 44px; max-width: 70vw; }
+  .foot .logo { display: inline-flex; background: var(--cream); border-radius: 16px; padding: 8px 16px; }
+  .foot-line { margin-top: 6px; font-size: .82rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .85; }
+  .hero-tagline { margin-top: 10px; font-size: .9rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green); }
+  @media (min-width: 900px) { .hero-tagline { font-size: 1.05rem; } }
+  .ingr-photo { position: relative; aspect-ratio: 1; border-radius: 16px; overflow: hidden; margin-bottom: 14px; background: #f5f0e4; }
+  .ingr-tile { display: grid; place-items: center; }
+  .ingr-tile-k { background: #CFE8D5; }
+  .ingr-tile .ingr-icon { width: 46%; height: 46%; margin: 0; }
+  .reel-grid { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; margin-top: 30px; max-width: 760px; }
+  .reel { margin: 0; }
+  .reel video { width: 100%; aspect-ratio: 9 / 16; border-radius: 22px; background: var(--ink); border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); display: block; object-fit: cover; }
+  .reel figcaption { margin-top: 12px; font-family: var(--display); font-weight: 800; font-size: 1.25rem; }
+  .reels { background: var(--cream2); }
+  .b3d-frame { margin-top: 28px; border-radius: 28px; overflow: hidden; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); background: var(--cream); height: min(72vh, 640px); }
+  @media (max-width: 600px) { .b3d-frame { height: 66vh; } }
+  .b3d-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
   .logo-ph { display: flex; align-items: center; gap: 8px; }
   .logo-ph svg { width: 28px; height: 34px; }
   .logo-word { font-family: var(--display); font-weight: 800; font-size: 1.7rem; color: var(--orange); line-height: 1; padding-top: 4px; }
@@ -185,6 +201,8 @@
   .flv-top { display: grid; place-items: center; padding: 24px; min-height: 270px; }
   .flv-top .cup { width: 180px; height: auto; }
   .flv-photo { position: relative; width: 100%; aspect-ratio: 1; border-radius: 18px; overflow: hidden; }
+  .flv-top:has(.flv-photo) { padding: 0; }
+  .flv-top:has(.flv-photo) .flv-photo { border-radius: 0; }
   .flv-body { padding: 20px; }
   @media (min-width: 600px) { .flv-body { padding: 22px 24px 26px; } }
   .tag { display: inline-block; padding: 5px 12px; border-radius: 999px; font-weight: 700; font-size: .82rem; }
